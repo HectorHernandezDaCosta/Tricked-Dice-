@@ -2,8 +2,32 @@ import random
 from typing import List, Sequence, Any
 
 
+##RANDOM NUMBER##
 
-
+def generate_random_with_user_range():
+  print("--- Random Number Generator ---")
+  # 1. Ask the user for the minimum limit
+  while True:
+    try:
+      min_limit = int(input("Enter the lower limit (minimum, e.g., 1): "))
+      break
+    except ValueError:
+      print("Error! Please enter a valid integer.")
+  # 2. Ask the user for the maximum limit
+  while True:
+    try:
+      max_limit = int(input("Enter the upper limit (maximum, e.g., 100): "))
+      if max_limit < min_limit:
+        print("Error! The upper limit must be greater than or equal to the lower limit.")
+      else:
+        break
+    except ValueError:
+      print("Error! Please enter a valid integer.")
+  # 3. Generate the random number
+  random_number = random.randint(min_limit, max_limit)
+  # 4. Display the result
+  print(f"\n The random number generated between {min_limit} and {max_limit} is: **{random_number}**")
+generate_random_with_user_range()
 
 
 #####SELECT FROM LIST#####
