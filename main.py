@@ -49,3 +49,50 @@ def rand_list(user_list: List[Any], percentages: Sequence[float]) -> Any:
 
 #Example
 #print(rand_list(["Max", "jhon", "sophie"], (10, 70, 3)))
+
+
+
+
+##### GENERAL INPUT #####
+
+def general_input():
+    while True:
+        print("\n===== RANDOM GENERATOR PROJECT =====")
+        print("Tasks:")
+        print("1. Coin Flip (Iván)")
+        print("2. Random Number (Kevin)")
+        print("3. Choose From List (Héctor)")
+        print("0. Exit")
+        option = input("Select an option: ")
+
+        if option == "0":
+            print("Exiting...")
+            break
+
+        elif option == "1":
+            print("\n-- Coin Flip (Iván) --")
+            print("Feature not implemented yet by Iván.")
+
+        elif option == "2":
+            generate_random_with_user_range()
+
+        elif option == "3":
+            print("\n-- Choose From List (Héctor) --")
+            raw_list = input("Enter the options separated by commas: ")
+            user_list = [item.strip() for item in raw_list.split(",")]
+
+            raw_percentages = input("Enter the percentages (comma-separated): ")
+            percentages = [float(item.strip()) for item in raw_percentages.split(",")]
+
+            result = rand_list(user_list, percentages)
+            print("\nResult:", result)
+
+        else:
+            print("Invalid option. Try again.")
+
+
+##### RUN #####
+
+if __name__ == "__main__":
+    general_input()
+
