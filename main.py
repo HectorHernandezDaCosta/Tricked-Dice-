@@ -74,7 +74,7 @@ def general_input():
         print("1. Coin Flip  (Iván)", flush=True)
         print("2. Random Number (Kevin)", flush=True)
         print("3. Choose From List (Héctor)", flush=True)
-        print("4. Random Range (Kevin - extra)", flush=True)
+        print("4. Random Range (Iván)", flush=True)
         print("0. Exit", flush=True)
 
         option = input("Select an option: ").strip()
