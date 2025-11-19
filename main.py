@@ -50,7 +50,45 @@ def rand_list(user_list: List[Any], percentages: Sequence[float]) -> Any:
 #Example
 #print(rand_list(["Max", "jhon", "sophie"], (10, 70, 3)))
 
+#RANDOM_RANGE
 
+def rand_range(min_range: float,max_range:float,true_max:float,true_min:float)->Any:
+
+
+#Select numbers to add and substract so it does not look like  atricked program 
+    subtle_difference_number=random.randint(-3,3)
+    subtle_difference_number_1=random.randint(-3,3)
+    
+    true_max+=subtle_difference_number
+
+    true_min+=subtle_difference_number_1
+
+#Check that it is a tuple with (minimum,maximum)
+
+    while true_max>max_range:
+        true_max-=1
+   
+    while true_min<min_range:
+        true_min+=1
+
+    while true_min>max_range:
+        true_min-=1
+   
+    while true_max<min_range:
+        true_max+=1
+
+
+    while true_min>true_max:
+       true_min-=random.randint(1,3)
+    
+   
+
+    return(true_min,true_max)
+
+
+
+print(rand_range(1,10,5,10))
+    
 
 ##### GENERAL INPUT (Celso) #####
 
