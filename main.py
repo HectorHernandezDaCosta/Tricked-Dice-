@@ -71,10 +71,9 @@ def general_input():
     while True:
         print("\n===== RANDOM GENERATOR PROJECT =====", flush=True)
         print("Tasks:", flush=True)
-        print("1. Coin Flip  (Iván)", flush=True)
-        print("2. Random Number (Kevin)", flush=True)
-        print("3. Choose From List (Héctor)", flush=True)
-        print("4. Random Range (Iván)", flush=True)
+        print("1. Random Number (Kevin)", flush=True)
+        print("2. Choose From List (Héctor)", flush=True)
+        print("3. Random Range (Iván)", flush=True)
         print("0. Exit", flush=True)
 
         option = input("Select an option: ").strip()
@@ -83,15 +82,11 @@ def general_input():
             print("Exiting...", flush=True)
             break
 
-        elif option == "1":
-            print("\n-- Coin Flip (Iván) --", flush=True)
-            result = random.choice(["Heads", "Tails"])
-            print("Result:", result, flush=True)
 
-        elif option == "2":
+        elif option == "1":
             generate_random_with_user_range()
 
-        elif option == "3":
+        elif option == "2":
             print("\n-- Choose From List (Héctor) --", flush=True)
             raw_list = input("Enter the options separated by commas: ").strip()
             user_list = [item.strip() for item in raw_list.split(",")]
@@ -106,7 +101,7 @@ def general_input():
             result = rand_list(user_list, percentages)
             print("\nResult:", result, flush=True)
 
-        elif option == "4":
+        elif option == "3":
             print("\n-- Random Range (Kevin) --", flush=True)
             try:
                 min_range = float(input("Enter min_range: ").strip())
