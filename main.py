@@ -76,9 +76,8 @@ def general_input():
 
         # 2. RANDOM NUMBER — Kevin
         elif option == "2":
-            print("\n-- Random Number (Kevin) --")
-            print("Feature not implemented yet by Kevin.")
-
+              generate_random_with_user_range()
+          
         # 3. CHOOSE FROM LIST — Héctor
         elif option == "3":
             print("\n-- Choose From List (Héctor) --")
